@@ -1,5 +1,7 @@
+import { HttpResponse, HttpRequest } from '../interfaces/http-interface'
+
 export class RegisterVehicle {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpRequest): (HttpResponse) {
     const { name, model } = httpRequest.body
 
     if (name === undefined || name === '') {
@@ -15,5 +17,7 @@ export class RegisterVehicle {
         body: new Error('error in the: model')
       }
     }
+
+    return { body: { ok: true }, statusCode: 200 }
   }
 }
