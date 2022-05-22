@@ -8,7 +8,7 @@ export class RegisterVehicle {
       if (httpRequest.body[prop] === undefined || httpRequest.body[prop] === '') {
         return {
           statusCode: 400,
-          body: new Error(`error in the: ${prop}`)
+          body: new Error(`Error in the Parameter: ${prop}`)
         }
       }
     }
