@@ -1,7 +1,7 @@
 import { VehicleHelper } from '../helpers/vehicle-model-helper'
 
 export class VehicleModel {
-  constructor (private readonly vehicle: VehicleHelper) {}
+  constructor (private readonly vehicle: VehicleHelper) { }
 
   getName (): string {
     return this.vehicle.name
@@ -17,9 +17,5 @@ export class VehicleModel {
 
   getPrice (): number {
     return this.vehicle.price
-  }
-
-  getInventory (): boolean {
-    return this.vehicle.inventory
   }
 }

@@ -3,5 +3,4 @@ export class VehicleHelper {
   model: string;
   year: number;
   price: number;
-  inventory: boolean;
 }
