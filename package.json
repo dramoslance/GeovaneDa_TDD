@@ -4,7 +4,7 @@
   "description": "Project to learn about TDD and Clean code best practices",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --watch",
+    "test": "jest --watch",
     "start": "node app.js",
     "prepare": "husky install"
   },
