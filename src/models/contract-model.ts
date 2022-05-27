@@ -25,3 +25,10 @@ export class ContractModel {
     return this.contract.monthly_cost
   }
 }
+
+// Open-closed principle
+export class PrimeContract extends ContractModel {
+  getMonthlyDiscount (): number {
+    return this.contract.monthly_cost * 0.1
+  }
+}
