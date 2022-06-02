@@ -12,4 +12,10 @@ describe('Team Class', () => {
 
     expect(team.position(position.name, position.tShirt, position.skills)).toEqual(['goalkeeper', 1, ['Kick hard', 'Jump fast', 'Jump high']])
   })
+
+  test('Attacker', () => {
+    const team = new Team()
+
+    expect(team.attacker('clodovaldo')).toBe('attacker')
+  })
 })
