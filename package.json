@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "test:int": "jest -c",
+    "test:int": "jest --testPathPattern=test\\.ts$",
     "start": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts",
     "prepare": "husky install"
   },
