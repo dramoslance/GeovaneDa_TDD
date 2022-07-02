@@ -4,8 +4,11 @@
   "description": "Project to learn about TDD and Clean code best practices",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "test:int": "jest --testPathPattern=test\\.ts$",
+    "test": "jest --passWithNoTests --silent --noStackTrace",
+    "test:all": "jest",
+    "test:int": "yarn test --watch -c jest-int.config.ts",
+    "test:unit": "yarn test --watch -c jest-unit.config.ts",
+    "test:coverage": "yarn test --coverage",
     "start": "ts-node-dev --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts",
     "prepare": "husky install"
   },
